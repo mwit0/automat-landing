@@ -1,15 +1,26 @@
 import Image from "next/image";
 import jumboSrc from "@/public/jumbo.svg";
+import logoSrc from "@/public/logo.svg";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white" style={{
+      backgroundImage: 'radial-gradient(circle, rgba(0,0,0,0.1) 2px, transparent 2px)',
+      backgroundSize: '50px 50px'
+    }}>
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 backdrop-blur-sm border-b border-gray-100 z-50">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-2xl font-bold text-black">
-              AutoTask
+            <div className="flex items-center">
+              <Image
+                src={logoSrc}
+                alt="AutoTask Logo"
+                width={32}
+                height={32}
+                className="mr-3"
+              />
+              <span className="text-2xl font-bold text-black">AutoTask</span>
             </div>
             <div className="hidden md:flex space-x-8">
               <a href="#" className="text-black hover:text-gray-600 transition-colors">
@@ -27,11 +38,11 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <main className="pt-24 pb-16">
+      <main className="pt-18 pb-16">
         <div className="max-w-7xl mx-auto px-6 sm:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-between">
             {/* SVG Graphic - Shows first on mobile, second on desktop */}
-            <div className="lg:w-1/2 order-1 lg:order-2 mb-12 lg:mb-0">
+            <div className="lg:w-1/2 order-1 lg:order-2 mb-4 lg:mb-0">
               <Image
                 src={jumboSrc}
                 alt="Jumbotron"
@@ -45,17 +56,13 @@ export default function Home() {
                 Skup się na wzroście.<br />
                 Resztę zautomatyzujemy.
               </h1>
-              <p className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
-                Świadczymy usługi automatyzacji procesów biznesowych dla małych i średnich przedsiębiorstw.
-                Pozwól nam usprawnić Twoje operacje, abyś mógł się skupić na rozwoju swojego biznesu.
+              <p className="md:text-xl text-gray-700 mb-8 leading-relaxed">
+                Świadczymy usługi identyfikacji, wizualizacji oraz automatyzacji procesów biznesowych dla małych i średnich przedsiębiorstw.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors">
-                  Rozpocznij automatyzację
-                </button>
-                <button className="border border-black text-black px-8 py-3 rounded-lg font-medium hover:bg-black hover:text-white transition-colors">
-                  Dowiedz się więcej
-                </button>
+                <a href="tel:+48796759746" className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors inline-block text-center">
+                  Skontaktuj się z nami
+                </a>
               </div>
             </div>
           </div>

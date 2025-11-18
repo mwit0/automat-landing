@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "AutoTask",
   description: "Automatyzacja procesów biznesowych dla małych i średnich przedsiębiorstw",
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
