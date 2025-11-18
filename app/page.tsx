@@ -22,14 +22,8 @@ export default function Home() {
               />
               <span className="text-2xl font-bold text-black">AutoTask</span>
             </div>
-            <div className="hidden md:flex space-x-8">
-              <a href="#" className="text-black hover:text-gray-600 transition-colors">
-                Usługi
-              </a>
-              <a href="#" className="text-black hover:text-gray-600 transition-colors">
-                O nas
-              </a>
-              <a href="#" className="text-black hover:text-gray-600 transition-colors">
+            <div className="flex space-x-8">
+              <a href="tel:+48796759746" className="text-black hover:text-gray-600 transition-colors">
                 Kontakt
               </a>
             </div>
